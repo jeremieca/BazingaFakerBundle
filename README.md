@@ -1,12 +1,12 @@
 # FakerBundle #
 
-[![Build Status](https://secure.travis-ci.org/willdurand/BazingaFakerBundle.png)](http://travis-ci.org/willdurand/BazingaFakerBundle)
-
 This bundle integrates [Faker](https://github.com/fzaninotto/Faker), a PHP library that generates fake data for you.
 It provides a command to load random data for your model objects as simple as possible.
 
+This repository is a fork of [willdurand/BazingaFakerBundle](https://github.com/willdurand/BazingaFakerBundle). It works **only with the 1.1.0 Faker** library version.
+This FakerBundle support **doctrine mongo**.
 
-## Easy installation with composer ##
+## Installation ##
 
 Configure composer.json as following :
 
@@ -23,29 +23,10 @@ Configure composer.json as following :
     "require": {
         // ...
         "willdurand/faker-bundle": "*",
-        "fzaninotto/faker": "*"
+        "fzaninotto/faker": "v1.1.0"
     }
 
 Then, execute "composer update".
-
-## Manual installation ##
-
-Install this bundle as usual:
-
-> git submodule add git://github.com/willdurand/BazingaFakerBundle.git vendor/bundles/Bazinga/Bundle/FakerBundle
-
-Add the [Faker](https://github.com/fzaninotto/Faker) library:
-
-> git submodule add git://github.com/fzaninotto/Faker.git vendor/faker
-
-Register the namespace in `app/autoload.php`:
-
-    // app/autoload.php
-    $loader->registerNamespaces(array(
-        // ...
-        'Bazinga'          => __DIR__.'/../vendor/bundles',
-        'Faker'            => __DIR__.'/../vendor/faker/src',
-    ));
 
 Register the bundle in `app/AppKernel.php`:
 
